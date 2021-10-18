@@ -14,7 +14,11 @@
 percent_declination_list = ['а', 'ов']  # список вариаций окончания
 one_percent_speak = 'процент'  # вариант для 1 и основа для остальных
 for percent in range(1, 101):
-    if percent % 10 == 1:
+    if percent > 10 and percent % 100 in range(11, 15):
+        percent_speak = f'{percent} {one_percent_speak}{percent_declination_list[1]}'
+        # Вывести эту фразу на экран отдельной строкой:
+        print(percent_speak)
+    elif percent % 10 == 1:
         percent_speak = f'{percent} {one_percent_speak}'
         # Вывести эту фразу на экран отдельной строкой:
         print(percent_speak)
@@ -32,12 +36,13 @@ print('_' * 19)
 print('вариант без списка:')
 # в этом варианте еще и максимум увеличил до 1000
 for percent in range(1, 1001):
-    if percent % 10 == 1:
+    if percent > 10 and percent % 100 in range(11, 15):
+        print(f'{percent} процентов')
+    elif percent % 10 == 1:
         print(f'{percent} процент')
     elif 1 < percent % 10 < 5:
         print(f'{percent} процента')
     else:
         print(f'{percent} процентов')
 
-# с этим заданием было проще всего - в водных уроках было похожее (про календарь),
-# но там я сделал с использованием словаря
+# исправил: числа от 11 до 20 должны быть "процентов"
