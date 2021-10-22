@@ -55,7 +55,9 @@ while x_input_name != '000':
         input_names = x_input_name.split(',')  # разбиваем полученную строку по ',' и получаем список names
         thesaurus(input_names)  # передаем список в функцию
         print('*' * 45)
-        print(dict_names)  # выводим полученный словарь
+        for keys, values in dict_names.items():
+            print(f'{keys}: {values}')  # выводим полученный словарь построчно
+
 
 # для теста:
 # print('test:')
