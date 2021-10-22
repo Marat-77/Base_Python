@@ -52,6 +52,7 @@ while x_input_name != '000':
     if x_input_name == '000':
         print('Вы вышли из программы')
     else:
+        x_input_name = x_input_name.strip(',')  # удаляет запятую слева и справа строки
         input_names = x_input_name.split(',')  # разбиваем полученную строку по ',' и получаем список names
         thesaurus(input_names)  # передаем список в функцию
         print('*' * 45)
