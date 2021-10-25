@@ -22,6 +22,10 @@ from random import sample
 
 # ------------------functions------------------
 def input_number():
+    """
+    Function return integer from user input
+    :return: int
+    """
     # проверка введенных данных
     # -------------------------------------------------------------
     str_jokes = ''
@@ -36,7 +40,12 @@ def input_number():
     # -------------------------------------------------------------
 
 
-def get_jokes(n):
+def get_jokes(n: int):
+    """
+    Function get number and return n*jokes
+    :param n: int
+    :return: print str
+    """
     print(f'----- get_jokes ----- n = {n}')
     nouns = ['автомобиль', 'лес', 'огонь', 'город', 'дом']
     adverbs = ['сегодня', 'вчера', 'завтра', 'позавчера', 'ночью']
@@ -49,6 +58,11 @@ def get_jokes(n):
 
 
 def get_jokes_zip(n):
+    """
+    Function get number and return n*jokes
+    :param n: int
+    :return: print list
+    """
     print(f'----- get_jokes_zip ----- n = {n}')
     nouns = ['автомобиль', 'лес', 'огонь', 'город', 'дом']
     adverbs = ['сегодня', 'вчера', 'завтра', 'позавчера', 'ночью']
@@ -76,7 +90,7 @@ def main():
         elif user_choice == '2':
             print('слова в шутках не повторяются')
             num = input_number()
-            get_jokes(num)
+            get_jokes_zip(num)
         elif user_choice == '0':
             print('Вы вышли из программы')
             break
@@ -94,5 +108,3 @@ if __name__ == '__main__':
 # но думаю что-то можно другое использовать (map/zip...), но не придумал как их тут использовать...
 
 # P.S.: В итоге что-то придумал с sample и zip, но надо с этим еще разбираться...
-# и sample(population, k) хотя и написано "Return a k length list of unique elements",
-# но почему то получаются повторы...
