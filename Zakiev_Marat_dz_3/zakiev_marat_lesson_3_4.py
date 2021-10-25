@@ -23,6 +23,12 @@
 
 # def thesaurus_adv(employees: list) -> dict:
 def thesaurus_adv(employees: str) -> dict:
+    """
+    Function get string of names and save into dict
+    функция принимает строку с именами и вносит в словарь
+    :param employees: str - incoming string of names
+    :return: dict
+    """
     employees = employees.strip(',')  # удаляет запятую слева и справа строки
     employees = employees.split(',')  # разбиваем полученную строку по ',' и получаем список employees
     print('_' * 35)
@@ -91,3 +97,6 @@ def main():
 if __name__ == '__main__':
     dict_surname = dict()  # ======================================== СЛОВАРЬ ФАМИЛИИ СОТРУДНИКОВ ====================!
     main()
+
+# Как поступить, если потребуется сортировка по ключам?
+# - пока не знаю... надо изучить подробнее
