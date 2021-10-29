@@ -17,13 +17,7 @@ def find_value_str(text: str, str_a: str, str_b: str = '') -> str:
     :return: str
     """
     index_a = text.find(str_a)  # index_a
-    # print(f'!!!---- str_a{str_a}')
-    # print(f'len str_={len(str_a)}')
-    # print(f'===========-------------index_a---{index_a}')
-    # print(text[index_a:])
-    # index_a += index_a + len(str_a) - 1  # index_a + > +1
-    index_a += len(str_a)  # index_a + > +1
-    # index_a += (text[index_a:]).find('>') + 1  # index_a + > +1
+    index_a += len(str_a)  # index_a + len(str_a)
     text_b = text[index_a:]
     if str_b == '':
         value_str = text[index_a:]
@@ -47,8 +41,6 @@ def currency_rates():
         currency = currency.upper()
         # --------------*******************************************************--------------
         if input_text.count(currency + '</CharCode>') == 0:
-            # print(None)
-            # return_none = None
             return None
         else:
             x = currency + '</CharCode>'
@@ -67,15 +59,12 @@ def currency_rates():
             response_month = int(response_date[3:5])
             response_year = int(response_date[-4:])
             cur_date = datetime.date(response_year, response_month, response_day)
-            # print(type(cur_date))
+            # print(type(cur_date))  # <class 'datetime.date'>
             date_str_currency_value = f'{cur_date}: {str_currency_value} руб.'
             print(date_str_currency_value)
             # return str_currency_value, float_currency_value, round_currency_value, cur_date
             return float_currency_value
-        # print('<<<<<<<<<< - currency_rates - >>>>>>>>>>')
         # --------------*******************************************************--------------
-        # Date="29.10.2021"
-        # 29.10.2021
     elif response.status_code == 404:
         print('Не найден.')
 
