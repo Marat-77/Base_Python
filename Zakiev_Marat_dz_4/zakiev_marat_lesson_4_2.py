@@ -1,4 +1,4 @@
-# zakiev_marat_lesson_4_2
+# zakiev_marat_lesson_4_2.
 # 2. Написать функцию currency_rates(), принимающую в качестве аргумента код валюты (например, USD, EUR, GBP, ...)
 # и возвращающую курс этой валюты по отношению к рублю. Использовать библиотеку requests.
 # В качестве API можно использовать http://www.cbr.ru/scripts/XML_daily.asp.
