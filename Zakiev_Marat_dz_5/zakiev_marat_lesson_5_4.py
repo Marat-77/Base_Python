@@ -1,5 +1,4 @@
-# Zakiev_Marat_dz_5/zakiev_marat_lesson_5_4.py
-# draft_zakiev_marat_lesson_5_4.py
+# zakiev_marat_lesson_5_4.py
 
 # 4. Представлен список чисел. Необходимо вывести те его элементы, значения которых больше предыдущего, например:
 # src = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
@@ -47,3 +46,6 @@ if __name__ == '__main__':
         gen_list.append(g)
     print(f'{getsizeof(gen_list)} - getsizeof gen_list')
     print(gen_list)
+
+#
+# well done!
