@@ -1,4 +1,4 @@
-# Zakiev_Marat_dz_5/zakiev_marat_lesson_5_1.py
+# zakiev_marat_lesson_5_1.py
 
 # 1. Написать генератор нечётных чисел от 1 до n (включительно), используя ключевое слово yield, например:
 # >>> odd_to_15 = odd_nums(15)
@@ -38,4 +38,5 @@ def main():
 if __name__ == '__main__':
     main()
 
+#
 # well done!
