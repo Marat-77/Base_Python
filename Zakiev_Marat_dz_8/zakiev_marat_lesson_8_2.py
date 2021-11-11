@@ -49,4 +49,4 @@ if __name__ == '__main__':
             # print(line)
             print(reg_ex_parse(line))
     # ----------------------- file -----------------------
-#
+# #
