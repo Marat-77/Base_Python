@@ -48,3 +48,4 @@ print(pencil.draw())
 yellow_handle = Handle('желтый маркер')
 print(yellow_handle.draw())
 #
+#
