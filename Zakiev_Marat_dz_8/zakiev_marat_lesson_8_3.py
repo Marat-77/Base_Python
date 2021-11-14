@@ -62,3 +62,4 @@ if __name__ == '__main__':
 # calc_cube(5: <class 'int'>)
 # 4. если @logger(verbosity=2):
 # calc_cube(5: <class 'int'>) -> 125
+#
