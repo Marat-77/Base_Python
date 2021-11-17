@@ -1,0 +1,33 @@
+my_project:
+    files:
+    - readme.txt
+    dirs:
+        settings:
+            files:
+            - __init__.py
+            - dev.py
+            - prod.py
+        mainapp:
+            files:
+            - __init__.py
+            - models.py
+            - views.py
+            dirs:
+                templates:
+                    dirs:
+                        mainapp:
+                            files:
+                            - base.html
+                            - index.html
+        authapp:
+            files:
+            - __init__.py
+            - models.py
+            - views.py
+            dirs:
+                templates:
+                    dirs:
+                        authapp:
+                            files:
+                            - base.html
+                            - index.html
