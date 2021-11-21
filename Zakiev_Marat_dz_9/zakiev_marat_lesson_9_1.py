@@ -136,3 +136,4 @@ gorkogo_lenina.running()
 tr_new = TrafficLight('Новый')
 tr_new.schedule_running(10, 22)  # запуск светофора, работающего по расписанию с 10:00 до 20:00
 #
+#
