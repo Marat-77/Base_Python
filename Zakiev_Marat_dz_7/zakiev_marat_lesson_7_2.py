@@ -150,3 +150,4 @@ if __name__ == '__main__':
     project_name_, path_readme_, list_structure = read_conf()
     create_project(project_name_, path_readme_, list_structure)  #
 #
+# I did it!
