@@ -14,3 +14,54 @@
 # Класс-исключение должен не позволить пользователю ввести текст (не число) и отобразить соответствующее сообщение.
 # При этом работа скрипта не должна завершаться.
 # -------------------------------------------------------------------------------------------
+#
+
+class NotDigitError(Exception):
+    def __init__(self, text):
+        self.text = text
+
+
+class CheckInput:
+    def __init__(self):
+        pass
+
+
+def check_input(input_x):
+    if input_x.isdigit():
+        return int(input_x)
+    else:
+        try:
+            output_x = float(input_x)
+            return output_x
+        except ValueError:
+            raise NotDigitError(f'ОШИБКА: "{input_x}" - не число! Введите число!')
+    # try:
+    #     output_x = int(input_x)  # ValueError: invalid literal for int() with base 10: 'gf'
+    #     return output_x
+    # except NotDigitError as e:
+    #     print(e)
+
+
+def main():
+    print('Записываем числа в список:')
+    input_str = ''
+    list_numbers = []
+    while input_str != 'stop':
+        input_str = input('Введите число\n[для выхода введите "stop"]: ')
+        if input_str == 'stop':
+            print('Вы вышли из программы. Полученный список:')
+            print(list_numbers)
+        else:
+            try:
+                # проверяем число
+                input_int = check_input(input_str)
+                # добавляем число к списку
+                list_numbers.append(input_int)
+            except NotDigitError as e:
+                print(e)
+
+
+if __name__ == '__main__':
+    main()
+
+#
